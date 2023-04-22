@@ -1,21 +1,27 @@
+//getting form inputs
 const firstName = document.getElementById("firstName");
 
-firstName.addEventListener("input", checkFirstName);
+//adding event listeners and calling appropriate functions
+firstName.addEventListener("input", validate_FirstName);
 
-function checkFirstName(event) {
+
+//function for checkingName
+function validate_FirstName(event) {
     const value = event.target.value;
-    const newValue = value.replace(/[0-9]/g, ""); // Replace all numbers with empty string
-    event.target.value = newValue;
+
+    //replace any characters that is not a letter with empty ""
+    const newValue = value.replace(/[^a-zA-Z]/g, "");
+
+    // Replace the first letter of the input to uppercase 
+    const upperCase_letter = newValue.replace(/^./, newValue[0].toUpperCase());
+
+    // Replace all uppercase letters after the first letter to lowercase 
+    const finalValue = upperCase_letter.replace(/[A-Z]/g, (char) =>
+        char.toLowerCase()
+    );
+
+    // Set the value of the input element to the cleaned and formatted value
+    event.target.value = finalValue;
 }
 
 
-// firstName.addEventListener("input", (e) => {
-//     const fName_input = e.target.value;
-
-
-//     const containsNumber = /[0-9]/g.test(fName_input);
-//     if (containsNumber) {
-//         e.preventDefault();
-//         console.log("Numbers are not allowed in the first name field.");
-//     }
-// });
