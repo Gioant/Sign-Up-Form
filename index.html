@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin - Sign-Up Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+
+<body class="header finisher-header">
+    <section>
+        <div id="left">
+            <img src="./images/michal-kubalczyk-zjn17WVQAZ4-unsplash.jpeg" alt="computer">
+        </div>
+
+        <div id="right">
+
+            <div id="top">
+                <h2>Get Your Free Account Now</h2>
+                <h4>Let us get you all set up so you can verify your personal account and begin setting up your profile.</h4>
+            </div>
+
+            <form action="#">
+                <div class="inputs">
+                    <label>First Name</label>
+                    <input type="text" placeholder="John" name="firstName" id="firstName" required minlength="3" />
+                </div>
+
+                <div class="inputs">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Snow" name="lastName" id="lastName" minlength="3" required />
+                </div>
+
+                <div class="inputs">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="XXX-XXX-XXXX" name="phoneNum" id="phoneNum" required />
+                </div>
+
+                <div class="inputs">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="johnsnow@example.com" name="Email" id="Email" required />
+                </div>
+
+                <div class="inputs">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter a password" name="Pass" minlength="5" id="Pass" required />
+                </div>
+
+                <div class="inputs">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm password" name="Confirm_Pass" id="Confirm_Pass" minlength="5" required />
+                </div>
+
+                <div id="note">
+                    <p>By signing up, you are agreeing to our
+                        <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+                    </p>
+                    <button>Create Account</button>
+                </div>
+            </form>
+
+            <hr>
+            <p>Already have an account? <a href="#">Log In</a></p>
+        </div>
+
+    </section>
+
+
+    <script src="./validation.js" type="text/javascript"></script>
+    <script src="./finisher-header.es5.min.js" type="text/javascript"></script>
+    <script>
+        new FinisherHeader({
+            "count": 100,
+            "size": {
+                "min": 2,
+                "max": 8,
+                "pulse": 0
+            },
+            "speed": {
+                "x": {
+                    "min": 0,
+                    "max": 0.4
+                },
+                "y": {
+                    "min": 0,
+                    "max": 0.6
+                }
+            },
+            "colors": {
+                "background": "#201e30",
+                "particles": [
+                    "#fbfcca",
+                    "#d7f3fe",
+                    "#ffd0a7"
+                ]
+            },
+            "blending": "overlay",
+            "opacity": {
+                "center": 1,
+                "edge": 0
+            },
+            "skew": 0,
+            "shapes": [
+                "c"
+            ]
+        });
+    </script>
+</body>
+
+</html>
