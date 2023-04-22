@@ -1,26 +1,53 @@
 //getting form inputs
 const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const phoneNum = document.getElementById("phoneNum");
+
+const password = document.getElementById("Pass");
+const confirmPass = document.getElementById("ConfirmPass");
+
 
 //adding event listeners and calling appropriate functions
-firstName.addEventListener("input", validate_FirstName);
+firstName.addEventListener("input", validateName);
+lastName.addEventListener("input", validateName);
 
+phoneNum.addEventListener("input", validatePhone);
+phoneNum.addEventListener("blur", formatPhone);
 
-//function for checkingName
-function validate_FirstName(event) {
+//function for validating first & last name
+function validateName(event) {
     const value = event.target.value;
 
     //replace any characters that is not a letter with empty ""
     const newValue = value.replace(/[^a-zA-Z]/g, "");
 
-    const finalValue = newValue.replace(/^[a-zA-Z]|[\W_]+[a-zA-Z]/g, (char) =>
-        char.toUpperCase()
-    ).replace(/[A-Z]/g, (char) =>
-        char.toLowerCase()
-    );
-
+    //uppercase first letter and letters after that put it into lowercase
+    const finalValue = newValue.charAt(0).toUpperCase() + newValue.slice(1).toLowerCase();
 
     // Set the value of the input element to the cleaned and formatted value
     event.target.value = finalValue;
 }
 
+//function to validate phone number
+function validatePhone(event) {
+    let digit = event.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+
+    return event.target.value = digit[1] + digit[2] + digit[3];
+}
+
+function formatPhone(event) {
+    let cellNum = event.target.value;
+
+    // Format the phone number using a regex expression
+    let formatted_PhoneNum = cellNum.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+
+    // set the formatted phone num to phone input
+    event.target.value = formatted_PhoneNum;
+}
+
+function checkPassword(event){
+    if(password.value !== confirmPass.value){
+        
+    }
+}
 
