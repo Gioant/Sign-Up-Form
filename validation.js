@@ -6,6 +6,8 @@ const phoneNum = document.getElementById("phoneNum");
 const password = document.getElementById("Pass");
 const confirmPass = document.getElementById("ConfirmPass");
 
+const submitBtn = document.getElementById("submit");
+
 
 //adding event listeners and calling appropriate functions
 firstName.addEventListener("input", validateName);
@@ -13,6 +15,8 @@ lastName.addEventListener("input", validateName);
 
 phoneNum.addEventListener("input", validatePhone);
 phoneNum.addEventListener("blur", formatPhone);
+
+submitBtn.addEventListener("click", checkInputs);
 
 //function for validating first & last name
 function validateName(event) {
@@ -35,6 +39,7 @@ function validatePhone(event) {
     return event.target.value = digit[1] + digit[2] + digit[3];
 }
 
+//function to format phone
 function formatPhone(event) {
     let cellNum = event.target.value;
 
@@ -45,9 +50,13 @@ function formatPhone(event) {
     event.target.value = formatted_PhoneNum;
 }
 
-function checkPassword(event){
-    if(password.value !== confirmPass.value){
-        
-    }
+function checkInputs(event){
+    let inputs = document.querySelectorAll("input");
+
+    inputs.forEach((input => {
+        if(isEmpty(input)){
+            input.setAttribute("isvalid", "false");
+        }
+    }));
 }
 
