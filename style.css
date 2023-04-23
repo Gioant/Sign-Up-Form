@@ -100,6 +100,20 @@ input {
     border-style: solid;
 }
 
+input:focus {
+    outline: none;
+    border-color: #46A7F6;
+    border-width: 1px;
+    box-shadow: 0 0 2px #98CEFA;
+}
+
+input:invalid{
+    outline: none;
+    border-color: #DB1414;
+    border-width: 1px;
+    box-shadow: 0 0 2px #EB2B2B;
+}
+
 #note {
     padding-left: 8px;
 }
