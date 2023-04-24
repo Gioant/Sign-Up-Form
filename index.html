@@ -23,35 +23,35 @@
                 <h4>Let us get you all set up so you can verify your personal account and begin setting up your profile.</h4>
             </div>
 
-            <form method="post">
+            <form action="#" method="post" onsubmit="event.preventDefault();">
                 <div class="inputs">
                     <label>First Name</label>
-                    <input type="text" placeholder="John" name="firstName" id="firstName" minlength="3" maxlength="10" />
+                    <input type="text" placeholder="John" name="firstName" id="firstName" minlength="3" maxlength="10" required />
                 </div>
 
                 <div class="inputs">
                     <label>Last Name</label>
-                    <input type="text" placeholder="Snow" name="lastName" id="lastName" minlength="3" maxlength="10" />
+                    <input type="text" placeholder="Snow" name="lastName" id="lastName" minlength="3" maxlength="10" required />
                 </div>
 
                 <div class="inputs">
                     <label>Phone Number</label>
-                    <input type="text" placeholder="XXX-XXX-XXXX" name="phoneNum" id="phoneNum" minlength="10" />
+                    <input type="text" placeholder="XXX-XXX-XXXX" name="phoneNum" id="phoneNum" minlength="10" required />
                 </div>
 
                 <div class="inputs">
                     <label>Email Address</label>
-                    <input type="email" placeholder="johnsnow@example.com" name="Email" id="Email" maxlength="25" />
+                    <input type="email" placeholder="johnsnow@example.com" name="Email" id="Email" maxlength="25" required />
                 </div>
 
                 <div class="inputs">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter a password" name="Pass" minlength="5" maxlength="16" id="Pass" />
+                    <input type="password" placeholder="Enter a password" name="Pass" minlength="5" maxlength="16" id="Pass" required />
                 </div>
 
                 <div class="inputs">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="Confirm password" name="Confirm_Pass" id="Confirm_Pass" minlength="5" maxlength="16" />
+                    <input type="password" placeholder="Confirm password" name="Confirm_Pass" id="Confirm_Pass" minlength="5" maxlength="16" required />
                 </div>
 
                 <div id="note">
