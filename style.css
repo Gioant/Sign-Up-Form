@@ -107,11 +107,19 @@ input:focus {
     box-shadow: 0 0 2px #98CEFA;
 }
 
-input:invalid{
+.invalid {
     outline: none;
     border-color: #DB1414;
     border-width: 1px;
     box-shadow: 0 0 2px #EB2B2B;
+}
+
+input:valid,
+.valid {
+    outline: none;
+    border-color: #3BCE1A;
+    border-width: 1px;
+    box-shadow: 0 0 2px #87ED70;
 }
 
 #note {
