@@ -1,0 +1,106 @@
+@media only screen and (max-width: 576px) {
+    #left {
+        display: none;
+    }
+
+    #right {
+        width: 90vw;
+    }
+
+    #top {
+        border-top-left-radius: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h4 {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    form {
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .inputs {
+        width: 100%;
+        padding: 6px;
+    }
+
+    #note p {
+        display: none;
+    }
+
+    #note {
+        margin-top: 1rem;
+    }
+
+    hr+p {
+        font-size: 14px;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1280px) {
+    #left {
+        display: none;
+    }
+
+    #right {
+        width: 90vw;
+    }
+
+    #top {
+        border-top-left-radius: 1rem;
+        padding-right: 2.75rem;
+    }
+
+    h4 {
+        width: unset;
+    }
+
+    form {
+        font-size: 14px;
+    }
+
+    #note p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    hr+p {
+        font-size: 14px;
+        padding-bottom: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 1415px) {
+
+    section {
+        width: 85vw;
+    }
+
+    #right {
+        width: unset;
+    }
+
+    #note p {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 1700px) {
+
+    h4 {
+        width: 75%;
+    }
+}
