@@ -106,10 +106,10 @@ function formatPhone(event) {
     } else {
         event.target.classList.remove("valid");
         event.target.classList.add("invalid");
-
-        // set the formatted phone num to phone input
-        return event.target.value = formatted_PhoneNum;
     }
+
+    // set the formatted phone num to phone input
+    event.target.value = formatted_PhoneNum;
 
 }
 
