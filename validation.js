@@ -3,6 +3,8 @@ const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const phoneNum = document.getElementById("phoneNum");
 
+const email = document.getElementById("Email");
+
 const password = document.getElementById("Pass");
 const confirmPass = document.getElementById("Confirm_Pass");
 
@@ -19,6 +21,7 @@ lastName.addEventListener("input", validateName);
 phoneNum.addEventListener("input", validatePhone);
 phoneNum.addEventListener("blur", formatPhone);
 
+email.addEventListener("input", validateEmail);
 
 password.addEventListener("input", checkPass);
 confirmPass.addEventListener("input", checkPass);
@@ -68,6 +71,24 @@ function validatePhone(event) {
 
 
     phoneInput.value = digit[1] + digit[2] + digit[3];
+}
+
+function validateEmail(event) {
+    let email_Input = event.target.value
+
+    const emailRegex = /^\S+@\S+\.\S+$/;
+
+    let trimmedEmail = email_Input.replace(/\s+/g, "");
+
+    event.target.value = trimmedEmail;
+
+    if (!emailRegex.test(email.value)) {
+        email.classList.remove("valid");
+        email.classList.add("invalid");
+    } else {
+        email.classList.remove("invalid");
+        email.classList.add("valid");
+    }
 }
 
 //function to format phone
